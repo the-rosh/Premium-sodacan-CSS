@@ -1,0 +1,117 @@
+
+
+
+
+html {
+    background-image: url(./bg.png);
+    background-position: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.banner {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+
+}
+
+.banner .product {
+
+    width: max-content;
+    height: 500px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    transition: 1s;
+    --left:-350px;
+    display: flex;
+}
+
+
+
+
+
+.banner .product .soda {
+    background: var(--url) var(--left) 0
+    ,url(./can.png);
+    background-size: auto 100%;
+    width: 280px;
+    aspect-ratio: 2.9 / 5;
+    background-blend-mode: multiply;
+    filter: brightness(1.5);
+    mask-image: url(./can.png);
+    mask-size: auto 100%;
+    position: absolute;
+    transition: 2s;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    
+}
+
+
+.banner .product:hover{
+    --left: -1200px;
+    translate:0 -100px;
+}
+
+.banner .product .soda:nth-child(2){
+    opacity: 0;
+
+}
+.banner .product:hover .soda:nth-child(2){
+    opacity: 1;
+
+}
+
+
+.heading {
+    color: white;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    text-shadow: 0px 0px 50px rgba(156, 152, 152, 0.669);
+    font-family:'RetroRaceDemoRegular', "Ruslan Display", sans-serif;
+    font-size: 7rem;
+    font-weight: 900;
+    word-wrap: normal
+;
+
+}
+
+
+@media screen and (max-width: 584px) {
+    html {
+            background-image: url(./bg.png);
+            background-position: center;
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        .heading {
+            color: white;
+            position: absolute;
+            padding: 10px;
+            margin: 50px auto;
+            text-shadow: 0px 0px 50px rgba(156, 152, 152, 0.669);
+            font-family: 'RetroRaceDemoRegular', "Ruslan Display", sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            left: 50%;
+            translate: -50%;
+
+
+    
+        }
+}
